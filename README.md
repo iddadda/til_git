@@ -258,25 +258,60 @@ git merge 합쳐주고자하는브랜치명
 ## 4. GitHub 프로젝트 연결하기
 
 ### 4.1. 원격 저장소 주소 지정하기
+
 - `remote`는 원격(인터넷)을 말합니다.
 - `add`는 추가하라
 - `origin`
-    - http 주소를 간략하게 별칭을 준 것입니다.
-    - 단어는 마음대로 하셔도 돼요
-    - `원격 이름`을 말함
-- 
+  - http 주소를 간략하게 별칭을 준 것입니다.
+  - 단어는 마음대로 하셔도 돼요
+  - `원격 이름`을 말함
+-
 
 ```bash
 git remote add origin https://github.com/iddadda/til_git.git
 ```
 
 ### 4.2. 원격 저장소 목록보기
+
 ```bash
 git remote -v
 ```
 
 ### 4.3 원격 저장소에 소스 등록하기
+
 ```bash
-git add . 
+git add .
 git commit -m "[docs]: 최초등록"
+```
+
+- 소스 업로드를 `push한다`라고 합니다.
+
+```bash
+git push -u origin main
+```
+
+- `-u`옵션을 붙이셨다면 이후로는 `git push `만 하면 됨.
+
+### 4.4. 원격 저장소 관리하기
+
+```bash
+git remote -v
+```
+
+- 삭제하기
+
+```bash
+git remote remove 원격이름
+```
+
+- 추가하기
+
+```bash
+git remote add 원격이름 https주소
+```
+
+- 이름 바꾸기
+
+```bash
+git remote rename 옛이름 새이름
 ```
